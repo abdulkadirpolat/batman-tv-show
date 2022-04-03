@@ -1,0 +1,15 @@
+@use "../Helpers/breakpoints" as bp;
+.show_card_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  @include bp.breakpointMax("xxlarge") {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @include bp.breakpointMax("large") {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include bp.breakpointMax("medium") {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,10 @@
+@use "../Helpers/mixins" as mx;
+
+.app {
+  @include mx.Flex(column);
+  min-height: 100vh;
+  padding: 10px 0;
+  flex: 1;
+  background-color: #131620;
+  color: white;
+}

@@ -1,0 +1,44 @@
+.show_card {
+  border-radius: 4px;
+  margin: 10px;
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+  img {
+    width: 100%;
+  }
+  &_info {
+    padding: 10px;
+    color: white;
+    min-height: 150px;
+    bottom: 0;
+    position: absolute;
+    background-color: #242a30e5;
+    width: 100%;
+    &_genres {
+      opacity: 0.5;
+    }
+    &_header {
+      font-size: 1rem;
+      font-weight: 400;
+      :last-child {
+        color: #ffc107;
+      }
+    }
+    &_title {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      padding: 5px 0;
+    }
+    &_rating {
+      font-size: 1rem;
+      line-height: 1;
+      border-radius: 5px;
+      width: 35px;
+      padding-bottom: 5px;
+    }
+  }
+  .display_none {
+    display: none;
+  }
+}

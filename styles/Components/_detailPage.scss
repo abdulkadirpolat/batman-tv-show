@@ -1,0 +1,73 @@
+@use "../Helpers/breakpoints" as bp;
+@use "../Helpers/mixins" as mx;
+
+.detail {
+  color: white;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  width: 100%;
+  max-width: 1500px;
+
+  &_image {
+    cursor: pointer;
+    &:hover {
+      background-color: rgb(136, 136, 136);
+      border-radius: 100%;
+    }
+  }
+
+  &_header {
+    display: flex;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 5rem 0;
+    &_image {
+      min-width: 250px;
+    }
+    img {
+      border-radius: 1.3rem;
+    }
+
+    &_info {
+      padding-left: 2rem;
+      padding-right: 2rem;
+
+      &_title {
+        @include mx.Flex(row);
+        justify-content: space-between;
+        width: 100%;
+        padding: 5px 0;
+        &_average {
+          @include mx.Flex(row);
+          justify-content: space-between;
+          width: 40px;
+          height: 20px;
+        }
+      }
+    }
+
+    @include bp.breakpointMax(large) {
+      flex-direction: column;
+      align-items: center;
+      padding-right: 0;
+      padding-left: 0;
+      // img {
+      //   width: 300px;
+      //   height: auto;
+      //   margin-bottom: 2rem;
+      // }
+    }
+  }
+
+  &_cast {
+    display: flex;
+    flex-wrap: wrap;
+
+    &_item {
+      @include mx.Flex(column);
+      justify-content: center;
+      padding: 1rem;
+    }
+  }
+}
